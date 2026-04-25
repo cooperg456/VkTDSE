@@ -8,19 +8,19 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 
 ##	---------------------------------------------------
-##	--	Build Schro2D executable
+##	--	Build VkTDSE executable
 ##	---------------------------------------------------
 file(GLOB CPP_FILES "${CMAKE_SOURCE_DIR}/src/*.cpp")
 
-add_executable(Schro2D)
-target_sources(Schro2D PRIVATE ${CPP_FILES})
+add_executable(VkTDSE)
+target_sources(VkTDSE PRIVATE ${CPP_FILES})
 
 find_package(Vulkan REQUIRED)
 find_package(glfw3 REQUIRED)
-target_link_libraries(Schro2D PRIVATE Vulkan::Vulkan glfw)
+target_link_libraries(VkTDSE PRIVATE Vulkan::Vulkan glfw)
 
-target_compile_definitions(Schro2D PRIVATE $<$<CONFIG:Debug>:DEBUG>)
-set_target_properties(Schro2D PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
+target_compile_definitions(VkTDSE PRIVATE $<$<CONFIG:Debug>:DEBUG>)
+set_target_properties(VkTDSE PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
 
 
 
@@ -49,4 +49,4 @@ foreach(GLSL_FILE ${GLSL_FILES})
 endforeach()
 
 add_custom_target(shaders ALL DEPENDS ${SPV_FILES})
-add_dependencies(Schro2D shaders)
+add_dependencies(VkTDSE shaders)

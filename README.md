@@ -17,7 +17,7 @@ where N is the number of system threads.
 
 ## Usage
 ```zsh
-./qwave2d <config>
+./VkTDSE <config>
 ```
 | Config | Description         |
 | :----- | :------------------ |
