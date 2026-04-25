@@ -1,6 +1,8 @@
 # VkTDSE
 VkTDSEs (Vulkan Time-Dependent Schrödinger Equation) is a GPU-accelerated solver for the Time-Dependent Schrödinger Equation in 2D, implemented with Vulkan compute shaders. It simulates the evolution of Gaussian wave packets in configurable 2D potential landscapes with real-time visualization.
 
+This project was created as a final course project for PHYS 1321 COMPUTATIONAL METHODS IN PHYSICS at the University of Pittsburgh.
+
 ## Dependencies
 - [Vulkan SDK](https://vulkan.lunarg.com/)
 - [GLFW](https://www.glfw.org/)
